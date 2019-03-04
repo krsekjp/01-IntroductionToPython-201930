@@ -39,10 +39,23 @@ red_turtle.pen_up()
 red_turtle.right(90)
 red_turtle.forward(100)
 red_turtle.left(90)
-red_turtle.speed=15
+red_turtle.speed = 15
 
 red_turtle.pen_down()
 for k in range(10):
     red_turtle.draw_circle(200-10*k)
 
+blue_turtle = rg.SimpleTurtle('turtle')
+blue_turtle.pen = rg.Pen('Blue',4)
+blue_turtle.pen_down()
+blue_turtle.speed = 10
+for k in range(10):
+    blue_turtle.left(60)
+    blue_turtle.forward(200-k*20)
+    blue_turtle.left(120)
+    blue_turtle.forward(200-k*20)
+    blue_turtle.left(120)
+    blue_turtle.forward(200-k*20)
+    blue_turtle.left(60)
+    
 window.close_on_mouse_click()
