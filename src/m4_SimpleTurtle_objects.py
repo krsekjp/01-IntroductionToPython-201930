@@ -81,7 +81,7 @@ import rosegraphics as rg
 # (shorthand for rosegraphics) module.
 # -----------------------------------------------------------------------------
 window = rg.TurtleWindow()
-window.delay(20)  # Bigger numbers mean slower animation.
+window.delay(25)  # Bigger numbers mean slower animation.
 
 # -----------------------------------------------------------------------------
 # The next few lines show how to:
@@ -103,16 +103,16 @@ boris.forward(200)
 #   - Construct a second SimpleTurtle,
 #     set its  pen  and  speed  INSTANCE VARIABLES, and ask it to do things.
 # -----------------------------------------------------------------------------
-natasha = rg.SimpleTurtle('blank')
+natasha = rg.SimpleTurtle('arrow')
 natasha.pen = rg.Pen('yellow', 10)  # Second argument is the Pen's thickness
-natasha.speed = 3  # Bigger means faster, max is usually about 10
+natasha.speed = 8  # Bigger means faster, max is usually about 10
 
 natasha.backward(50)
 natasha.right(90)
 natasha.forward(125)
 natasha.left(17)
 
-natasha.speed = 7  # Now slower
+natasha.speed = 2  # Now slower
 natasha.go_to(rg.Point(100, 200))
 
 ###############################################################################
@@ -130,7 +130,7 @@ natasha.go_to(rg.Point(100, 200))
 
 ###############################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   The above code  CONSTRUCTS  two SimpleTurtle objects
 #   and gives those objects NAMES:
 #       boris    natasha
@@ -156,11 +156,15 @@ natasha.go_to(rg.Point(100, 200))
 ###############################################################################
 jimmy = rg.SimpleTurtle('turtle')
 jimmy.pen = rg.Pen('green',5)
-jimmy.speed=10
+
+jimmy.speed = 3
+
+jimmy.backward(100)
+jimmy.left(70)
 
 ###############################################################################
 #
-# TODO: 6.
+# DONE: 6.
 #   Ensure that no blue bars on the scrollbar-thing to the right remain.
 #   Run one more time to be sure that all is still OK.
 #
